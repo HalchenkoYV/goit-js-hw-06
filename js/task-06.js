@@ -3,7 +3,7 @@ const inputBox = document.querySelector("#validation-input");
 inputBox.addEventListener("focus", () => { })
 
 inputBox.addEventListener("blur", () => {
-    if (inputBox.value.length === 6) {
+    if (inputBox.value.length === Number.parseInt(inputBox.getAttribute('data-length'))) {
         inputBox.classList.replace('invalid','valid' )
     }
     
